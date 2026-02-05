@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride with cabcaro.com - Travel Comfortably & Locally</title>
+    <meta name="description" content="Affordable and reliable rides with cabcaro.com. Register your interest for services in your locality.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="cabcaro.com">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg desktop-bg" style="background-image: url('img/Hero_desktop.png');"></div>
+        <div class="hero-bg mobile-bg" style="background-image: url('img/Hero_mobile.png');"></div>
+        
+        <div class="overlay"></div>
+
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Ride with <span class="brand-color">cabcaro.com</span></h1>
+                <h2>Experience Premium <span class="highlight">Comfort & Convenience</span></h2>
+                <p class="sub-headline">Bringing reliable rides to your neighborhood. Tell us where you want us next.</p>
+                
+                <ul class="benefits-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Safe & Secure</li>
+                    <li><i class="fa-solid fa-check-circle"></i> No Surge Pricing</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Verified Drivers</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Clean Cabs</li>
+                </ul>
+            </div>
+
+            <div class="form-wrapper">
+                <form id="passengerHeroForm" class="onboarding-form">
+                    <h3>Get Started</h3>
+                    <p class="form-subtitle">Register to bring cabcaro to your locality</p>
+                    
+                    <div class="form-group">
+                        <label for="p_hero_fullName">Full Name</label>
+                        <input type="text" id="p_hero_fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="p_hero_mobileNumber">Mobile Number</label>
+                        <input type="tel" id="p_hero_mobileNumber" name="mobileNumber" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="p_hero_city">City & Locality</label>
+                        <div class="autocomplete-wrapper">
+                            <input type="text" id="p_hero_city" name="city" placeholder="Type to search city" autocomplete="off" required>
+                            <div id="p_hero_city_suggestions" class="suggestions-box hidden"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button">
+                        <span class="btn-text">Submit Interest</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                    
+                    <p class="form-footer">We value your privacy. Your data is safe with us.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Ride with us?</h2>
+                <p>Better rides, happier journeys.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4>Safety First</h4>
+                    <p>Every ride is tracked and monitored for your safety and peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+                    <h4>Transparent Pricing</h4>
+                    <p>No hidden charges or surprise surge pricing. You pay what you see.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-smile"></i>
+                    </div>
+                    <h4>Support Local</h4>
+                    <p>We empower local drivers with fair earnings, ensuring a better service for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="cabcaro.com">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Support</a>
+                </div>
+                <p class="copyright">&copy; 2026 cabcaro.com Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Onboarding Modal -->
+    <div id="onboardingModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-form-wrapper">
+                <form id="passengerModalForm" class="onboarding-form">
+                    <h3>Register Now</h3>
+                    <p class="form-subtitle">Be the first to know when we launch!</p>
+                    
+                    <div class="form-group">
+                        <label for="p_modal_fullName">Full Name</label>
+                        <input type="text" id="p_modal_fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="p_modal_mobileNumber">Mobile Number</label>
+                        <input type="tel" id="p_modal_mobileNumber" name="mobileNumber" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="p_modal_city">City & Locality</label>
+                        <div class="autocomplete-wrapper">
+                            <input type="text" id="p_modal_city" name="city" placeholder="Type to search city" autocomplete="off" required>
+                            <div id="p_modal_city_suggestions" class="suggestions-box hidden"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button">
+                        <span class="btn-text">Submit Interest</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                    
+                    <p class="form-footer">Join our community today.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive with cabcaro.com - 0% Zero Commission Driver Onboarding</title>
+    <meta name="description" content="Join cabcaro.com and scale your earnings with 0% commission. Register today - focused on Delhi NCR.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="cabcaro.com">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg desktop-bg" style="background-image: url('img/Hero_desktop.png');"></div>
+        <div class="hero-bg mobile-bg" style="background-image: url('img/Hero_mobile.png');"></div>
+        
+        <div class="overlay"></div>
+
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Drive with <span class="brand-color">cabcaro.com</span></h1>
+                <h2>Scale Your Earnings with <span class="highlight">0% Zero Commission</span></h2>
+                <p class="sub-headline">Join the revolution in Delhi NCR. Keep 100% of what you earn for the first 500 drivers.</p>
+                
+                <ul class="benefits-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Scheduled Transfers</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Daily Commutes</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Long-Distance Tours</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Logistics & Delivery</li>
+                </ul>
+            </div>
+
+            <div class="form-wrapper">
+                <form id="heroForm" class="onboarding-form">
+                    <h3>Join Now</h3>
+                    <p class="form-subtitle">Limited Offer: 0% Zero Commission</p>
+                    
+                    <div class="form-group">
+                        <label for="hero_fullName">Full Name</label>
+                        <input type="text" id="hero_fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hero_mobileNumber">Mobile Number</label>
+                        <input type="tel" id="hero_mobileNumber" name="mobileNumber" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hero_licenseNumber">Driving Licence Number</label>
+                        <input type="text" id="hero_licenseNumber" name="licenseNumber" placeholder="Ex: DL1234567890" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hero_city">City</label>
+                        <div class="autocomplete-wrapper">
+                            <input type="text" id="hero_city" name="city" placeholder="Type to search city" autocomplete="off" required>
+                            <div id="hero_city_suggestions" class="suggestions-box hidden"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button">
+                        <span class="btn-text">Start Earning</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                    
+                    <p class="form-footer">By scaling up, you agree to our Terms & Conditions.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Drive with cabcaro.com?</h2>
+                <p>Designed for drivers, built for growth.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h4>0% Zero Commission</h4>
+                    <p>First 500 drivers pay absolutely ₹0 commission. Your hard work, your money.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <h4>Flexibility</h4>
+                    <p>Choose your rides. Whether it's city commutes or outstation tours, you decide.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <h4>Instant Payouts</h4>
+                    <p>Get your earnings settled directly to your bank account instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="cabcaro.com">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Support</a>
+                </div>
+                <p class="copyright">&copy; 2026 cabcaro.com Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Onboarding Modal -->
+    <div id="onboardingModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-form-wrapper">
+                <form id="modalForm" class="onboarding-form">
+                    <h3>Register Now</h3>
+                    <p class="form-subtitle">Don't miss the <strong>0% Zero Commission</strong> offer!</p>
+                    
+                    <div class="form-group">
+                        <label for="modal_fullName">Full Name</label>
+                        <input type="text" id="modal_fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modal_mobileNumber">Mobile Number</label>
+                        <input type="tel" id="modal_mobileNumber" name="mobileNumber" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modal_licenseNumber">Driving Licence Number</label>
+                        <input type="text" id="modal_licenseNumber" name="licenseNumber" placeholder="Ex: DL1234567890" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modal_city">City</label>
+                        <div class="autocomplete-wrapper">
+                            <input type="text" id="modal_city" name="city" placeholder="Type to search city" autocomplete="off" required>
+                            <div id="modal_city_suggestions" class="suggestions-box hidden"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button">
+                        <span class="btn-text">Start Earning</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                    
+                    <p class="form-footer">Limited spots available for 0% Commission.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
